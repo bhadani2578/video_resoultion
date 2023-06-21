@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dimitra Video  Resolution Converter</title>
+  <title>Dimitra Video Resolution Converter</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container">
-    <h1>Dimitra Video  Resolution Converter</h1>
+    <h1>Dimitra Video Resolution Converter</h1>
     <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <label for="video" class="form-label">Select Video:</label>
@@ -14,11 +14,21 @@
       </div>
       <div class="mb-3">
         <label for="resolution" class="form-label">Output Resolution:</label>
-        <input class="form-control" type="text" name="resolution" id="resolution" required>
+        <select class="form-select" name="resolution" id="resolution" required>
+          <option value="1920x1080">1920x1080 (Full HD or 1080p)</option>
+          <option value="1280x720">1280x720 (HD or 720p)</option>
+          <option value="3840x2160">3840x2160 (4K UHD or 2160p)</option>
+          <option value="2560x1440">2560x1440 (2K or QHD)</option>
+          <option value="4096x2160">4096x2160 (4K DCI or DCI 4K)</option>
+          <option value="3840x1600">3840x1600 (UltraWide 4K or 21:9 4K)</option>
+          <option value="2560x1080">2560x1080 (UltraWide or 21:9)</option>
+          <option value="3440x1440">3440x1440 (UltraWide QHD or 21:9 QHD)</option>
+          <option value="2560x1600">2560x1600 (WQXGA)</option>
+          <option value="1920x1200">1920x1200 (WUXGA)</option>
+        </select>
       </div>
       <button class="btn btn-primary" type="submit">Convert</button>
     </form>
-    <div id="result" class="mt-4"></div>
   </div>
 </body>
 </html>
